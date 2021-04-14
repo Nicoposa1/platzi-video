@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
+import { Router } from 'react-router';
 import { createStore, compose } from 'redux';
 import { createBrowserHistory } from 'history';
 import reducer from './reducers';
