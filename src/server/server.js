@@ -67,6 +67,7 @@ const renderApp = (req, res) => {
       </StaticRouter>
     </Provider>,
   );
+  res.set('Content-Security-Policy', "img-src 'self' http://dummyimage.com");
   res.send(setResponse(html, preloadedState));
 };
 
@@ -74,5 +75,5 @@ app.get('*', renderApp);
 
 app.listen(PORT, (err) => {
   if (err) console.log(error);
-  else console.log('Server Running on port 3000');
+  else console.log(`Server Running on port ${PORT}`);
 });
